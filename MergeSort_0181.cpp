@@ -36,6 +36,7 @@ void input()
 // create function mergesort
 void mergeSort(int low, int high)
 {
+
     if (low >= high) // step 1
     {
         return; // step 1.a
@@ -54,5 +55,17 @@ void mergeSort(int low, int high)
     int k = low;        // step 4.c
 
     while (i <= mid && j <= high) // step 4.d
-    
+    {
+        if (arr[i] <= arr[j]) // step 4.e.i
+        {
+            B[k] = arr[i];
+            i++;
+        }
+        else
+        {
+            B[k] = arr[j];
+            j++;
+        }
+    }
+    k++; // step 4.d.ii
 }
